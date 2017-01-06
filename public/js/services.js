@@ -62,7 +62,7 @@ angular.module('starter')
    getUserInfo=function(){
     return $q(function(resolve, reject){
       $http.get(API_ENDPOINT.url+'/userinfo').then(function(result){
-      //console.log(result.data.user);
+      console.log(result);
        if(result.data.sucess){
          resolve(result.data.user);
        }  else{

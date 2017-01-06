@@ -14,6 +14,12 @@ angular.module('starter')
     //
     });
   };
+}).controller('OutSideCtrl', function($scope, AuthService, $state) {
+  $scope.image = {
+    link: '/images/background1.jpg'
+  };
+console.log("Working");
+
 })
 
 .controller('RegisterCtrl', function($scope, AuthService, $state) {
@@ -51,8 +57,8 @@ angular.module('starter')
     // $http.get(API_ENDPOINT.url + '/userinfo').then(function(result) {
     //   $scope.user = result.data.user;
     // });
-    AuthService.getUserInfo().then(function(result){
-      $scope.user=result;
+    AuthService.getUserInfo().then(function(user){
+      $scope.user=user;
       console.log("controller"+result);
 
     },function(err){
@@ -65,14 +71,14 @@ angular.module('starter')
 
   $scope.logout = function() {
     AuthService.logout();
-    $state.go('login');
+    $state.go('test');
   };
 })
 
 .controller('AppCtrl', function($scope, $state, AuthService, AUTH_EVENTS) {
   $scope.$on(AUTH_EVENTS.notAuthenticated, function(event) {
     AuthService.logout();
-    $state.go('login');
+    $state.go('outside');
 
   });
 });

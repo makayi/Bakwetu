@@ -1,67 +1,37 @@
-body {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
-  font-weight: 200;
-  font-size: 20px;
-}
+/* Variables */
+/* Small Navigation */
+.logo-small {
+  float: right; }
 
-.parallax-background {
-  background-color: #0078A0;
-  height: 620px;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  background-size: cover;
-  position: fixed;
-  width: 100%;
-}
+.title-bar {
+  padding: 0 .5rem; }
 
-.intro-text {
-  font-size: 50px;
-  color: #fff;
-  text-align: center;
-  margin-top: 15%;
-}
-.parallax-content {
-  max-width: 100%;
+.menu-icon,
+.title-bar-title {
   position: relative;
-  top: 500px;
-  padding: 50px;
-  font-size: 20px;
-  background-color: #fff;
-}
-SCSS
-body {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
-  font-weight: 200;
-  font-size: 20px;
-}
+  top: 10px; }
 
-.parallax-background {
-  background-color: #0078A0;
-  height: 620px;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position: fixed;
-  width: 100%;
-}
+/* Medium-Up Navigation */
+@media only screen and (min-width: 40rem) {
+  .logo-wrapper {
+    position: relative; }
+    .logo-wrapper .logo {
+      width: 118px;
+      height: 92px;
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      top: -6px;
+      margin-left: -59px; }
 
-.intro-text {
-  font-size: 50px;
-  color: #fff;
-  text-align: center;
-  margin-top: 15%;
-}
+  .top-bar-right {
+    width: 50%;
+    padding-left: 86px; }
+    .top-bar-right ul {
+      float: left; }
 
-.parallax-content {
-  max-width: 100%;
-  position: relative;
-  top: 500px;
-  padding: 50px;
-  font-size: 20px;
-  background-color: #fff;
-}
-JS
+  .top-bar-left {
+    width: 50%;
+    padding-right: 86px; }
+    .top-bar-left ul {
+      float: right; } }

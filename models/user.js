@@ -8,7 +8,8 @@ var userSchema=Schema({
   email:String,
   profile_url:String,
   password:String,
-  dob:String
+  dob:String,
+  phone:Number
 });
 
 
