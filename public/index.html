@@ -1,32 +1,33 @@
- <!DOCTYPE html>
-<html lang="en" ng-app="routerApp">
- <head>
-   <script type="text/javascript" src="/javascripts/angular.js"></script>
-   <script type="text/javascript" src="/javascripts/angular-ui-router.js"></script>
-  <script type= "text/javascript" src="/controllers/app.js"></script>
-  <link rel="stylesheet" type="text/css" href="/stylesheets/foundation.css">
- 	<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
- 	<script type="text/javascript" src="/javascripts/vendor/foundation.min.js"></script>
- </head>
+<!DOCTYPE html>
+<html lang="en" ng-app="starter">
+<head>
+  <script src="javascripts/angular.js"></script>
+    <script src="javascripts/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/javascripts/vendor/jquery.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/constants.js"></script>
 
-<div class="parallax-background">
-  <div class="intro-text">
-    Bakwetu
-    <p><i class="fi-arrow-down"></i></p>
-  </div>
-</div>
+ <link rel="stylesheet" type="text/css" href="/stylesheets/foundation.css">
+ <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+ <script type="text/javascript" src="/javascripts/vendor/foundation.min.js"></script>
 
-<div class="parallax-content">
-  <div ng-controller="sign-up-controller">
-    <input type="text" name="firstname" placeholder="firstname" ng-model="user.firstname"/>
-    <input type="text" name="lastname" placeholder="lastname" ng-model="user.lastname"/>
-    <input type="email" name="email" placeholder="email" ng-model="user.email"/>
-    <input type="password" name="password" placeholder="password" ng-model="user.password"/>
-    <input type="submit" ng-click="sendData()"></input>
-    </div>
-  </div>
-  </div>
+</head>
 
-</div>
+<body ng-controller="AppCtrl">
+   <div class="row">
+     <div class="large-12 columns">
+
+          <div  class="panel" ui-view></div>
+     </div>
+
+   </div>
+
+</body>
+
+
+
+
 
 </html>
