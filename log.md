@@ -16,7 +16,7 @@
 
 **Thoughts:** I really did know much about what I was doing when I started following the tutorial, plus Angular JS was flagging off some errors that I didn't know but I managed to figure it out at the end. It was dependency inject misspelling problem.
 
-### Day 4: January 3, 2017
+### Day 4: January 6, 2017
 **Today's Progress**: I had some great progress, after successfully implementing user Authentication, I decided to connect the front end with the backend. The user is now able to register ,login and view their information. I have implemented secure routes or pages that can only be seen by authorized user. The interface is still basic but it is functional.
 
 **Thoughts:** For the interface I have had to learn a bit of foundation but am struggling with it a bit. To be honest this project has made me realize that I am more of backend programmer than I wish to admit. Anyways am still trying to get the basic things working before I can focus of the interface of the project.
