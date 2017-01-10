@@ -1,5 +1,7 @@
-angular.module('starter',['ui.router'])
-.config(function($stateProvider,$urlRouterProvider){
+angular.module('starter',['ui.router','ngMaterial'])
+.config(function($stateProvider,$urlRouterProvider,$mdIconProvider){
+  $mdIconProvider
+    .iconSet('communication', 'img/icons/sets/communication-icons.svg', 24);
 
   $urlRouterProvider.otherwise('/outside');
   $stateProvider.state('outside', {
