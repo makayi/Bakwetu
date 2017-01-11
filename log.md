@@ -20,3 +20,8 @@
 **Today's Progress**: I had some great progress, after successfully implementing user Authentication, I decided to connect the front end with the backend. The user is now able to register ,login and view their information. I have implemented secure routes or pages that can only be seen by authorized user. The interface is still basic but it is functional.
 
 **Thoughts:** For the interface I have had to learn a bit of foundation but am struggling with it a bit. To be honest this project has made me realize that I am more of backend programmer than I wish to admit. Anyways am still trying to get the basic things working before I can focus of the interface of the project.
+
+### Day 5: January 11, 2017
+**Today's Progress**: I decided to use the Angular Material framework as the  primary UI framework sincce  the app is already using Angular JS.
+
+**Thoughts:** It is has been a interesting learning curve, been trying to figure out how to do it properly.
