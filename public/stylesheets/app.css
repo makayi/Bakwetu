@@ -4,9 +4,14 @@
   border-radius: 48px;
   border: 1px solid #ddd; }
 
-  
+
 .subheaderdemoBasicUsage .face {
   border-radius: 30px;
   border: 1px solid #ddd;
   width: 48px;
   margin: 16px; }
+
+.avatar-size{
+  width: 50px;
+  height: 50px;
+}

@@ -8,7 +8,7 @@ angular.module('starter')
 
   $scope.login = function() {
     AuthService.login($scope.user).then(function(msg) {
-      $state.go('inside');
+      $state.go('inside.messagelist');
 
     }, function(errMsg) {
     //
@@ -30,7 +30,7 @@ console.log("Working");
 
   $scope.register = function() {
     AuthService.register($scope.user).then(function(msg) {
-      $state.go('inside');
+      $state.go('inside.messagelist');
     //
     }, function(errMsg) {
 //
@@ -85,14 +85,11 @@ console.log("Working");
         $scope.toggleSideNav=function(menuId){
             $mdSidenav(menuId).toggle()
         }
-  }).controller('MessageCtrl',function($scope,$mdSidenav){
-        console.log("Hello");
-        $scope.toggleSideNav=function(menuId){
-            $mdSidenav(menuId).toggle()
-        }
+  }).controller('MessageListCtrl',function($scope){
 
 
-        $scope.activity = [
+
+        $scope.messagelist = [
             {
                 what: 'Brunch this weekend?',
                 who: 'Ali Conners',
@@ -137,7 +134,7 @@ console.log("Working");
                 notes: "Do you have Paris recommendations? Have you ever been?"
             },
             {
-                what: 'Birthday Gift',
+
                 who: 'Trevor Hansen',
                 when: '3:08PM',
                 notes: "Have any ideas of what we should get Heidi for her birthday?"

@@ -1,0 +1,25 @@
+
+<div class="inset" ng-controller="MessageListCtrl" flex md-scroll-y >
+  <md-card flex-gt-sm="90" flex-gt-md="80">
+    <md-card-content>
+      <md-list>
+        <md-list-item class="md-3-line" ng-repeat="  message in messagelist">
+          <md-item-content md-ink-ripple layout="row" layout-align=" start center">
+            <img class="avatar-size md-tile-left inset" ng-src="/images/dummy.jpg"/>
+            <div class="md-list-item-text">
+
+                <h4>{{message.who }}</h4>
+                 <p>{{message.what}}</p>
+
+            </div>
+  <md-divider></md-divider>
+  </md-item-content>
+
+</md-list-item>
+</md-list>
+
+    </md-card-content>
+
+  </md-card>
+
+</div>
