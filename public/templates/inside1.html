@@ -1,0 +1,92 @@
+<div layout="row" ng-controller="IndexController" style="overflow: hidden;height:100%;">
+    <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+                md-component-id="left"
+                style="background-color:#eeee;"
+                md-is-locked-open="$mdMedia('gt-sm')">
+        <md-toolbar layout="row" class="md-whiteframe-z1">
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" hide-gt-sm aria-label="Show Menu">
+                    <ng-md-icon icon="{{menuIcon}}" style="fill:white;vertical-align:middle;" ng-click="menuToggle()"
+                                hide-gt-sm></ng-md-icon>
+                </md-button>
+                <h2 style="color:white;">Bakwetu</h2>
+            </div>
+        </md-toolbar>
+        <div>
+            <img src="/images/background1.jpg"/ height="160px" width="258px">
+        </div>
+
+        <md-list>
+            <md-list-item ng-click="go('home','home');menuToggle();">
+
+                <p style="font-size:18px;color:black;">HOME</p>
+            </md-list-item>
+            <md-list-item ng-click="go('tech','tech');menuToggle();">
+                <p style="font-size:18px;color:black;">TECH</p>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item ng-repeat="item in menuItems" ng-click="go(item.path,item.name);menuToggle();">
+                <p style="font-size:18px;color:black;">{{item.name | uppercase}}</p>
+            </md-list-item>
+            <md-list-item ng-click="go('home','home');menuToggle();">
+                <p style="font-size:18px;color:black;">HOME</p>
+            </md-list-item>
+            <md-list-item ng-click="go('tech','tech');menuToggle();">
+                <p style="font-size:18px;color:black;">TECH</p>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item ng-repeat="item in menuItems" ng-click="go(item.path,item.name);menuToggle();">
+                <p style="font-size:18px;color:black;">{{item.name | uppercase}}</p>
+            </md-list-item>
+        </md-list>
+
+    </md-sidenav>
+
+    <div layout="column" layout-fill>
+        <header style="color:white;">
+            <md-toolbar layout="row" class="md-whiteframe-z1 md-primary md-hue-2">
+                <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" hide-gt-sm aria-label="Show Menu">
+                        <ng-md-icon icon="{{menuIcon}}" style="fill:white;" ng-click="menuToggle()"></ng-md-icon>
+                    </md-button>
+                    <h1 flex layout-align="center center" style="color:white;">
+                        <span>{{title | uppercase}}</span>
+                    </h1>
+                    <a href="https://github.com/mattspaulding/angular-material-kitchen-sink">
+                        logout
+                    </a>
+                </div>
+            </md-toolbar>
+        </header>
+
+         
+        <body
+       >         
+        <div
+         id="layoutContainer" ng‐controller="layoutController as ctrl" style="height:100px;" ng‐cloak>          
+         
+        <div
+         layout="row" layout‐xs="column">            
+          
+        <div
+         flex class="green box">Row 1: Item 1
+    </div>
+                  
+    <div
+     flex="20" class="blue box">Row 1: Item 2
+</div>           
+</div>         
+  
+<div layout="column" layout‐xs="column">            
+  
+<div flex="33" class="green box">Column 1: item 1</div>             
+ 
+<div flex="66" class="blue box">Column 1: item 2</div>           
+</div>       
+ </div>    
+ </body> 
+</div>
+
+
+</div>
+</div>

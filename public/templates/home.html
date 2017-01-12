@@ -1,0 +1,44 @@
+<html>
+
+<body layout="column">
+  <md-toolbar>
+    <h4>Bakwetu</h4>
+  </md-toolbar>
+
+  <div class="container" layout="row" >
+    <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp" >
+      <md-card>
+                 <img alt="Sandeep Gravatar image"
+                    src="/images/dummy.jpg">
+                 <md-card-content>
+                     <h2 class="md-title">About Me</h2>
+                     <p>
+                         A passionate Blogger and Developer.
+                         He has more then 5 years of experience on mobile application development.
+                         He loves to work in javascript/java programming language.At present he is
+                         exploring Node JS Web Component specification.
+                     </p>
+                 </md-card-content>
+             <md-card>
+
+    </md-sidenav>
+    <md-content id="content" flex >
+
+      <!-- Showing content like message list and message details-->
+      <div >
+            <div ui-view layout="column" layout-fill layout-padding> Hello</div>
+
+      </div>
+
+    </md-content>
+
+  </div>
+  <md-button ng-controller="fabCtrl" class= "md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
+      <ng-md-icon icon="add"></ng-md-icon>
+
+</body>
+
+
+
+
+ </html>
