@@ -25,3 +25,8 @@
 **Today's Progress**: I decided to use the Angular Material framework as the  primary UI framework sincce  the app is already using Angular JS.
 
 **Thoughts:** It is has been a interesting learning curve, been trying to figure out how to do it properly.
+
+### Day 6: January 12, 2017
+**Today's Progress**: Finally implemented the dashboard with a side navigation and a message list panel using the Angular Material. I have also managed to figure out how to nest states and views using UI-Router.
+
+**Thoughts:** It was quite challenging finding the right tutorials to set up the look I was going for. Even though Angular Material is great framework I feel like the developer community is not that active, tutorials are not that many. 
