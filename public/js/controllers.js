@@ -85,8 +85,17 @@ console.log("Working");
         $scope.toggleSideNav=function(menuId){
             $mdSidenav(menuId).toggle()
         }
-  }).controller('MessageListCtrl',function($scope){
+  }).controller('MessageDetailsCtrl', function($scope, AuthService){
+    AuthService.getMessageDetails().then(function(message){
+        console.log(message.who);
+          $scope.message=message;
+    });
 
+
+  //  console.log($scope.message);
+
+  }).controller('MessageListCtrl',function($scope, $state,$stateParams){
+        //console.log(stateParams.id);
 
 
         $scope.messagelist = [
@@ -139,7 +148,18 @@ console.log("Working");
                 when: '3:08PM',
                 notes: "Have any ideas of what we should get Heidi for her birthday?"
             }
+
+
         ];
+
+        $scope.itemClicked= function(message){
+          console.log(message);
+          $state.go('inside.message');
+
+
+
+
+        }
 
     }).controller('fabCtrl',function($scope, $mdBottomSheet, $mdSidenav, $mdDialog){
         console.log("fabCtrl");

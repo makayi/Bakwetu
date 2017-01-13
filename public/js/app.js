@@ -23,15 +23,17 @@ angular.module('starter',['ui.router','ngMaterial'])
      templateUrl: 'templates/home.html',
      controller: 'InsideCtrl'
    }).state('inside.messagelist',{
-     url:'/message',
+     url:'/messages',
      templateUrl:'templates/message-list.html',
      controller: 'MessageListCtrl'
 
    })
-   .state('test', {
-      url: '/test',
-      templateUrl: 'templates/test.html'
+   .state('inside.message', {
+      url: '/message/{id}',
+      templateUrl: 'templates/message.html',
+      controller:'MessageDetailsCtrl'
     });
+
 
 
 }).run(function($rootScope,$state,AuthService,AUTH_EVENTS){

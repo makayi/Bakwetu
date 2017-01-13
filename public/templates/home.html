@@ -1,10 +1,10 @@
 <html>
 
-<body layout="column">
+<md-content layout="column" >
   <md-toolbar>
-    <h4>Bakwetu</h4>
   </md-toolbar>
-
+  <md-button ng-controller="fabCtrl" class= "md-fab md-fab-bottom-right speed-dial" aria-label="Add" ng-click="showAdd($event)">
+      <ng-md-icon icon="add"></ng-md-icon> </md-button>
   <div class="container" layout="row" >
     <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp" >
       <md-card>
@@ -22,19 +22,23 @@
              <md-card>
 
     </md-sidenav>
-    <md-content id="content" flex >
+
+    <md-content id="content" md-padding layout-padding flex="90" >
 
       <!-- Showing content like message list and message details-->
-      <div >
-            <div ui-view layout="column" layout-fill layout-padding> Hello</div>
+      <md-whiteframe class="md-whiteframe-4dp page-container" flex-sm="45" flex-gt-sm="35" flex-gt-md="80" layout layout-align="center center">
+        <div layout="column" layout-fill layout-padding>
+          <div ui-view> Hello </div>
+        </div>
 
-      </div>
+  </md-whiteframe>
+
+
 
     </md-content>
 
   </div>
-  <md-button ng-controller="fabCtrl" class= "md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
-      <ng-md-icon icon="add"></ng-md-icon>
+
 
 </body>
 

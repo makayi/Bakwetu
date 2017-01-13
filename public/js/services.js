@@ -73,6 +73,21 @@ angular.module('starter')
     });
   };
 
+  getMessageDetails= function(){
+    return $q(function(resolve, reject){
+      //mock server call to database
+    var  message= {
+        what:'Brunch was this weekend?',
+        who:'Ali Conners Makayi',
+        message:'I am so sorry I missed the event'
+      }
+      console.log(message+"AuthService");
+      resolve(message);
+
+
+    });
+  }
+
   var logout = function() {
     destroyUserCredentials();
   };
@@ -81,6 +96,7 @@ angular.module('starter')
 
   return {
     getUserInfo:getUserInfo,
+    getMessageDetails:getMessageDetails,
     login: login,
     register: register,
     logout: logout,
