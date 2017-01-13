@@ -30,3 +30,9 @@
 **Today's Progress**: Finally implemented the dashboard with a side navigation and a message list panel using the Angular Material. I have also managed to figure out how to nest states and views using UI-Router.
 
 **Thoughts:** It was quite challenging finding the right tutorials to set up the look I was going for. Even though Angular Material is great framework I feel like the developer community is not that active, tutorials are not that many. 
+
+### Day 7: January 13, 2017
+**Today's Progress**: Managed to get the message list to message details layout working using the nested views and states. 
+
+**Thoughts:** It wasn't that challenging to get the  the layou going go the ui-router wiki is quite well documented.
+
