@@ -5,6 +5,33 @@
   border: 1px solid #ddd; }
 
 
+
+
+.md-sidenav-fixed {
+height: 80%;
+position: fixed;
+top: auto;
+left: auto;
+right: auto;
+
+
+}
+
+.message-panel{
+  height: 350px;
+}
+
+.fab-fixed{
+  position: fixed;
+    z-index: 990;
+
+}
+.contact-picture{
+  height: 100px;
+  width: 100px;
+}
+
+
 .subheaderdemoBasicUsage .face {
   border-radius: 30px;
   border: 1px solid #ddd;
@@ -16,10 +43,54 @@
   height: 50px;
 }
 
+.sign-button{
+  margin-left: 40%;
+}
+
+.send-button{
+    padding-left: 10px;
+    height: 0px;
+    
+}
+
+.sign-form{
+  margin-left: 15%;
+  margin-right:15%
+}
+
+.blue{
+  background-color: blue;
+
+}
+.green{
+  background-color:green;
+
+}
+
+
+.red{
+background-color: red;
+}
+
+
 .parent-container {
 	position:relative;
 }
 
 .speed-dial {
-    position: fixed;;
+    position: fixed;
+}
+
+.footer {
+    background: #fff;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+.message.ng-enter {
+    -webkit-animation: zoomIn 1s;
+    -ms-animation: zoomIn 1s;
+    animation: zoomIn 1s;
 }

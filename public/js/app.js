@@ -20,7 +20,7 @@ angular.module('starter',['ui.router','ngMaterial'])
    })
    .state('inside', {
      url: '/inside',
-     templateUrl: 'templates/home.html',
+     templateUrl: 'templates/home2.html',
      controller: 'InsideCtrl'
    }).state('inside.messagelist',{
      url:'/messages',
@@ -30,7 +30,7 @@ angular.module('starter',['ui.router','ngMaterial'])
    })
    .state('inside.message', {
       url: '/message/{id}',
-      templateUrl: 'templates/message.html',
+      templateUrl: 'templates/message1.html',
       controller:'MessageDetailsCtrl'
     });
 

@@ -1,36 +1,39 @@
    <h1>Login in Bakwetu</h1>
-<div  ng-controller="LoginCtrl">
-  <input type="email" name="email" placeholder="email" ng-model="user.email"/>
-  <input  type="password" name="password" placeholder="password" ng-model="user.password"/>
-  <input class="button" type="submit" ng-click="login()"></input>
-</div>
+    <div layout="row" ng-cloak >
+      <div flex="25" class="green"> Flex 25</div>
+      <div flex="50">
+        <md-content layout-padding ng-controller="LoginCtrl">
+          <!-- Showing content like message list and message details-->
+          <md-whiteframe class="md-whiteframe-4dp page-container"  layout layout-align="center center">
+            <div layout="column" layout-fill layout-padding>
 
-<md-content layout-padding>
-          <form name="projectForm">
-             <md-input-container class="md-block">
-                <label>User Name</label>
-                <input required name="userName" ng-model="project.userName">
-                <div ng-messages="projectForm.userName.$error">
-                   <div ng-message="required">This is required.</div>
-                </div>
-             </md-input-container>
-             <md-input-container class="md-block">
-                <label>Email</label>
-                <input required type="email" name="userEmail" ng-model="project.userEmail"
-                   minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-                <div ng-messages="projectForm.userEmail.$error" role="alert">
-                   <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                      Your email must be between 10 and 100 characters long and should be a valid email address.
-                   </div>
-                </div>
-             </md-input-container>
-             <md-input-container class="md-block">
-                <label>Comments</label>
-                <input md-maxlength="300" required name="comments" ng-model="project.comments">
-                <div ng-messages="projectForm.comments.$error">
-                   <div ng-message="required">This is required.</div>
-                   <div ng-message="md-maxlength">The comments has to be less than 300 characters long.</div>
-                </div>
-             </md-input-container>
-          </form>
-       </md-content>
+                      <form name="loginForm" class="sign-form">
+                         <md-input-container class="md-block">
+                            <label>Email</label>
+                            <input required type="email" name="userEmail" ng-model="project.userEmail"
+                               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                            <div ng-messages="projectForm.userEmail.$error" role="alert">
+                               <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                  Your email must be between 10 and 100 characters long and should be a valid email address.
+                               </div>
+                            </div>
+                         </md-input-container>
+                         <md-input-container class="md-block">
+                            <label>Password</label>
+                            <input md-maxlength="300" required name="password" ng-model="user.password">
+                            <div ng-messages="loginForm.password.$error">
+                               <div ng-message="required" role="alert">This is required.</div>
+                               <div ng-message="md-maxlength">The comments has to be less than 300 characters long.</div>
+                            </div>
+                         </md-input-container>
+                         <md-button class="md-primary md-raised sign-button" aria-label="Sign in" ng-click="login()">Sign in</md-button>
+                      </form>
+            </div>
+
+        </md-whiteframe>
+
+
+               </md-content>
+      </div>
+<div flex="25" class="red"> Flex 50</div>
+    </div>

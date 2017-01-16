@@ -70,6 +70,7 @@ router.post('/authenticate', function(req, res) {
 
 router.get('/userinfo',passport.authenticate('jwt',{session:false}),function(req,res){
   var token =getToken(req.headers);
+    console.log(token);
 
   if (token){
     var decoded= jwt.decode(token,config.secret);
@@ -80,6 +81,8 @@ router.get('/userinfo',passport.authenticate('jwt',{session:false}),function(req
       if(!user){
         return res.status(403).send({success:false,msg:'Authentication failed'})
       } else{
+          //console.log(user);
+
         res.json({sucess:true,msg:'Welcome in the members',user:user});
       }
     });

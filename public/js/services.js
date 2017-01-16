@@ -50,6 +50,7 @@ angular.module('starter')
           console.log(result);
           console.log("Service");
         if (result.data.success) {
+
           storeUserCredentials(result.data.token);
           resolve(result.data.msg);
         } else {
@@ -62,7 +63,7 @@ angular.module('starter')
    getUserInfo=function(){
     return $q(function(resolve, reject){
       $http.get(API_ENDPOINT.url+'/userinfo').then(function(result){
-      console.log(result);
+      console.log("getUserInfo"+result);
        if(result.data.sucess){
          resolve(result.data.user);
        }  else{
@@ -76,13 +77,78 @@ angular.module('starter')
   getMessageDetails= function(){
     return $q(function(resolve, reject){
       //mock server call to database
-    var  message= {
-        what:'Brunch was this weekend?',
-        who:'Ali Conners Makayi',
-        message:'I am so sorry I missed the event'
-      }
-      console.log(message+"AuthService");
-      resolve(message);
+    var messageList = [
+        {
+            what: 'Brunch this weekend?',
+            who: 'Ali Conners',
+            when: '3:08PM',
+            notes: " I'll be in your neighborhood doing errands"
+        },
+        {
+            what: 'Summer BBQ',
+            who: 'Mbuyu Makayi',
+            when: '3:08PM',
+            notes: "He has more then 5 years of experience on mobile application development. He loves to work in javascript/java programming language.At present he is exploring Node JS Web Component specification."
+        },
+
+        {
+            what: 'Summer BBQ',
+            who: 'Ali Conners',
+            notes: "Wish I could come out but I'm out of town this weekend",
+            when: '3:08PM'
+        },
+        {
+            who: 'Sandra Adams',
+            when: '3:08PM',
+            notes: "Do you have Paris recommendations? Have you ever been?"
+        }
+
+        ,
+
+        {
+            what: 'Summer BBQ',
+            who: 'Ali Conners',
+            notes: "Wish I could come out but I'm out of town this weekend",
+            when: '3:08PM'
+        },
+        {
+            who: 'Sandra Adams',
+            when: '3:08PM',
+            notes: "Do you have Paris recommendations? Have you ever been?"
+        }
+
+        ,
+
+        {
+            what: 'Summer BBQ',
+            who: 'Ali Conners',
+            notes: "Wish I could come out but I'm out of town this weekend",
+            when: '3:08PM'
+        },
+        {
+            who: 'Sandra Adams',
+            when: '3:08PM',
+            notes: "Do you have Paris recommendations? Have you ever been?"
+        }
+        ,
+
+        {
+            what: 'Summer BBQ',
+            who: 'Ali Conners',
+            notes: "Wish I could come out but I'm out of town this weekend",
+            when: '3:08PM'
+        },
+        {
+            who: 'Sandra Adams',
+            when: '3:08PM',
+            notes: "Do you have Paris recommendations? Have you ever been?"
+        }
+
+
+
+    ];
+      console.log(messageList+"AuthService");
+      resolve(messageList);
 
 
     });

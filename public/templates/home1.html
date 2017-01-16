@@ -1,0 +1,128 @@
+<div layout="column" ng-cloak>
+
+  <div flex="10">
+  <!-- Tooolbar space-->
+   <div class="navbar-fixed">
+     <nav>
+          <div class="nav-wrapper">
+            <a href="" class="brand-logo">Bakwetu<a/>
+            <ul class="right hide-on-med-and-down">
+
+                  <li> <a href=" ">Home</a></li>
+                    <li> <a href=" " ng-click="logout() ">Logout</a></li>
+
+            </ul>
+          </div>
+     </nav>
+    </div>
+
+  </div>
+
+  <div class="70">
+    <!-- side bar and other content-->
+    <div layout="row">
+
+      <div flex="30">
+
+          <!--sidenav -->
+          <div class="md-sidenav-fixed">
+            <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp side-nav " >
+
+             <div class="userView">
+                <div class="background">
+                  <img src="images/background3.jpg" height="200px" width="100%">
+
+                </div>
+                <a href="" ><img src="images/dummy.jpg" class="circle"/></a>
+                <a href="" ><span class="white-text name"> {{user.firstname}} {{user.lastname}}</span/></a>
+                <a href="" ><span class="white-text email">{{user.email}}</span/></a>
+
+             </div>
+
+              <md-list>
+
+                <md-list-item class="md-1-line">
+                  <img class="md-avatar" ng-src="/images/dummy.jpg"/>
+                  <md-item-content md-ink-ripple layout="row" layout-align=" start center">
+                      <div class="md-list-item-text">
+                          <p>Inbox</p>
+                       </div>
+                  </md-item-content>
+                    <md-divider ng-if="!$last"></md-divider>
+
+                </md-list-item>
+
+
+                              <md-list-item class="md-1-line">
+                                <img class="md-avatar" ng-src="/images/dummy.jpg"/>
+                                <md-item-content md-ink-ripple layout="row" layout-align=" start center">
+                                    <div class="md-list-item-text">
+                                        <p>Outbox</p>
+                                     </div>
+                                </md-item-content>
+                                  <md-divider ng-if="!$last"></md-divider>
+
+                              </md-list-item>
+
+
+                            <md-list-item class="md-1-line">
+                                <img class="md-avatar" ng-src="/images/dummy.jpg"/>
+                                    <md-item-content md-ink-ripple layout="row" layout-align=" start center">
+                                          <div class="md-list-item-text">
+                                                <p>Inbox</p>
+                                          </div>
+                                    </md-item-content>
+                                      <md-divider ng-if="!$last"></md-divider>
+
+                            </md-list-item>
+              </md-list>
+
+      </md-sidenav>
+          </div>
+
+
+       </div>
+
+       <div flex="60">
+
+         <md-content id="content" md-padding layout-padding flex="90" >
+
+           <!-- Showing content like message list and message details-->
+
+
+           <md-whiteframe class="md-whiteframe-4dp page-container" flex-sm="45" flex-gt-sm="90" flex-gt-md="80" layout layout-align="center center">
+
+             <div layout="column" layout-fill layout-padding>
+               <div ui-view> </div>
+             </div>
+
+       </md-whiteframe>
+
+
+
+         </md-content>
+
+       </div>
+
+    </div>
+
+
+      <div class="fab-fixed">
+          <md-button ng-controller="fabCtrl" class= "md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
+              <ng-md-icon icon="add"></ng-md-icon> </md-button>
+
+      </div>
+
+
+<!--end of main content div-->
+  </div>
+
+<div flex="20">
+  <!--footer-->
+
+
+</div>
+
+
+
+</div>

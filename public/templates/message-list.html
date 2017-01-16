@@ -1,9 +1,9 @@
 
-<div  ng-controller="MessageListCtrl" flex md-scroll-y >
+<div  ng-controller="MessageListCtrl" flex class="md-content">
 
 
       <md-list>
-        
+
         <md-list-item class="md-3-line" ng-repeat="  message in messagelist" ng-click="itemClicked(messages)">
           <img class="md-avatar" ng-src="/images/dummy.jpg"/>
           <md-item-content md-ink-ripple layout="row" layout-align=" start center">

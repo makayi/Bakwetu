@@ -8,7 +8,7 @@ angular.module('starter')
 
   $scope.login = function() {
     AuthService.login($scope.user).then(function(msg) {
-      $state.go('inside.messagelist');
+     $state.go('inside.messagelist');
 
     }, function(errMsg) {
     //
@@ -86,9 +86,9 @@ console.log("Working");
             $mdSidenav(menuId).toggle()
         }
   }).controller('MessageDetailsCtrl', function($scope, AuthService){
-    AuthService.getMessageDetails().then(function(message){
-        console.log(message.who);
-          $scope.message=message;
+    AuthService.getMessageDetails().then(function(messageList){
+        console.log(messageList);
+          $scope.messageList=messageList;
     });
 
 
